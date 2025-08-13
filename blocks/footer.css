@@ -1,10 +1,23 @@
 .footer{
   padding-top: 67px;
-  width: 68.7500%;
+  width: 880px;
   justify-self: left;
   font-family: Inter;
   font-weight: 400;
   font-size: 18px;
   line-height: 100%;
   padding-bottom: 60px;
+}
+
+/* @media screen and (min-width: 320px) and (max-width: 880px){ */
+@media screen and (max-width: 880px){
+  .footer{
+    padding-top: 50px;
+    width: 282px;
+    justify-self: left;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    padding-bottom: 36px;
+  }
 }

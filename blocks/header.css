@@ -1,6 +1,6 @@
 .header{
   padding-top: 45px;
-  width: 68.7500%;
+  width: 880px;
   border-bottom: 1px solid #545454;
 }
 
@@ -8,12 +8,18 @@
   padding-bottom: 41px;
 }
 
-/* @media screen and (min-width: 321px) and (max-width: 1279px){
+/* @media screen and (min-width: 320px) and (max-width: 880px){ */
+@media screen and (max-width: 880px){
   .header{
-    padding-top: 30px;
-    width: 33.08%;
+    padding-top: 28px;
+    padding-left: 27px;
+    width: 320px;
   }
-} */
+
+  .header__img{
+    padding-bottom: 32px;
+  }
+}
 
 /* @media screen and (max-width: 320px) {
   .header{

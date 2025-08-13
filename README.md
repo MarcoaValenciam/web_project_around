@@ -1,15 +1,8 @@
-# Tripleten web_project_around
-
-Sprint 7: Diseño Web Adaptativo
-
-Nombre del proyecto: 
-Galería de Arte Tripleten - Homeland
+Nombre del proyecto: Around The U.S.
 
 Funcionalidad: 
-Se creo una pagina web con diseño adaptativo, de manera que su contenido se pueda adaptar a la pantalla del dispositivo donde sea visualizada.
 
-Tecnologías utilizadas: 
-Metodológía BEM, metodología FlexBox, Media Queries, Figma, Importación de Fuentes, HTML y CSS.
+Tecnologías utilizadas: Metodológía BEM, Metodologia CSS FlexBox, Metodologia CSS Grid, Media Queries, Formularios, Figma, Importación de Fuentes, HTML, CSS, JavaScript, Manejo de repositorios con GitHub.
 
 Planes de mejora del proyecto: 
 
@@ -18,4 +11,3 @@ Desarrollador: Marco Antonio Valencia Mijangos
 Agosto, 2025.
 
 URL: https://marcoavalenciam.github.io/web_project_around/
-
