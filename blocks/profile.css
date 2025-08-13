@@ -128,7 +128,7 @@
     grid-template-rows: repeat(1, 1fr);
     grid-template-areas:
     "name edit"
-    "activity"
+    "activity activity"
     ;
   }
 
@@ -152,6 +152,8 @@
     font-size: 14px;
     line-height: 100%;
     text-align: center;
+    grid-area: activity;
+    column-gap: 0;
   }
 
   .profile__add{
