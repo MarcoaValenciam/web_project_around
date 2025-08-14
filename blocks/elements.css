@@ -92,6 +92,12 @@
   height: 19px;
 }
 
+.elements__element_title-fav:hover{
+  width: 21;
+  height: 19;
+  opacity: 0.5;
+}
+
 /* @media screen and (min-width: 320px) and (max-width: 880px){ */
 @media screen and (max-width: 880px){
   .elements{

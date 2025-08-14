@@ -26,7 +26,7 @@
           <h2 class="profile__info profile__info_activity">Explorador</h2>
         </div>
         <div class="profile__add">
-          <img class="profile__add profile__add_button" src="./images/Add Button.svg" alt="botón de alta"/>
+          <div class="profile__add profile__add_button"></div>
         </div>
       </section>
       <section class="elements">
@@ -87,6 +87,22 @@
       </section>
     </main>
     <footer class="footer">&copy; 2025 Around The U.S.</footer>
+  </div>
+
+  <div class="popup" id="miPopup">
+    <h2 class="popup__title">Editar perfil</h2>
+    <img class="popup__close" src="./images/close_icon.png"/>
+    <form class="popup__form">
+      <div class="popup__form popup__form_name">
+        <input type="text" id="#name" class="popup__form popup__form_name-text" placeholder="Nombre"/>
+      </div>
+      <div class="popup__form popup__form_activity">
+        <input type="text" id="#activity" class="popup__form popup__form_activity-text" placeholder="Acerca de mí"/>
+      </div>
+      <div class="popup__form popup__form_save">
+        <input type="submit" id="#save" class="popup__form popup__form_save-button" value="Guardar" />
+      </div>
+    </form>
   </div>
   <script src="scripts/script.js"></script>
 </body>

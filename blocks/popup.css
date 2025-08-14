@@ -1,0 +1,152 @@
+.popup{
+  position: absolute;
+  width: 430px;
+  height: 330px;
+  top: 195px;
+  justify-self: center;
+  background-color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-family: Inter;
+  justify-items: center;
+}
+
+.popup__close{
+  position: absolute;
+  top: -40px;
+  left: 430px;
+  width: 40px;
+  height: 40px;
+}
+
+.popup__close:hover{
+  opacity: 0.6;
+}
+
+.popup__title{
+  width: 76.7442%;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 100%;
+  padding-top: 34px;
+  justify-self: center;
+}
+
+.popup__form{
+  width: 83.2558%;
+}
+
+.popup__form_name{
+  padding-top: 54px;
+  width: 100%;
+  height: 27.26px;
+  border-bottom:1px solid #000000;
+  opacity: 0.2;
+}
+
+.popup__form_name-text{
+  width: 100%;
+  border: none;
+  outline: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+}
+
+.popup__form_activity{
+  width: 100%;
+  height: 27.26px;
+  padding-top: 29.74px;
+  border-bottom:1px solid #000000;
+  opacity: 0.2;
+}
+
+.popup__form_activity-text{
+  width: 100%;
+  border: none;
+  outline: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+}
+
+.popup__form_save{
+  padding-top: 48px;
+  width: 100%;
+  height: 50.1520px;
+  opacity: 1;
+  border-width: 1px;
+  border-radius: 2px;
+}
+
+.popup__form_save-button{
+  width: 100%;
+  height: 100%;
+  border:1px solid #000000;
+  opacity: 0.2;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+}
+
+/* @media screen and (min-width: 320px) and (max-width: 880px){ */
+@media screen and (max-width: 880px){
+  .popup{
+    width: 282px;
+    height: 322px;
+    top: 140px;
+  }
+
+  .popup__close{
+    left: 245px;
+    width: 26px;
+    height: 26px;
+  }
+
+  .popup__title{
+    width: 84.3972%;
+    padding-top: 25px;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 100%;
+  }
+
+  .popup__form{
+    width: 84.3972%;
+  }
+
+  .popup__form_name{
+    padding-top: 76px;
+    width: 100%;
+    height: 26px;
+  }
+
+.popup__form_name-text{
+    width: 100%;
+  }
+
+.popup__form_activity{
+    width: 100%;
+    padding-top: 30px;
+  }
+
+  .popup__form_activity-text{
+    width: 100%;
+  }
+
+  .popup__form_save{
+    padding-top: 46px;
+    width: 100%;
+    height: 46px;
+    opacity: 1;
+  }
+
+  .popup__form_save-button{
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+  }
+
+}
