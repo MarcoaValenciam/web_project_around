@@ -95,6 +95,7 @@
   width: 21;
   height: 19;
   opacity: 0.5;
+  cursor: url('../images/hand_over.png'), auto;
 }
 
 @media screen and (max-width: 880px){

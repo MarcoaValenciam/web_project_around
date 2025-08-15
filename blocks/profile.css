@@ -64,6 +64,7 @@
 
 .profile_info_edit-button:hover{
   border: 1px solid #FFFFFF;
+  cursor: url('../images/hand_over.png'), auto;
 }
 
 .profile__info_activity{
@@ -89,6 +90,7 @@
 
 .profile__add_button:hover{
     border: 2px solid #FFFFFF;
+    cursor: url('../images/hand_over.png'), auto;
 }
 
 @media screen and (max-width: 880px){

@@ -46,6 +46,7 @@
 
 .popup__close:hover{
   opacity: 0.6;
+  cursor: url('../images/hand_over.png'), auto;
 }
 
 .popup__title{
@@ -119,6 +120,7 @@
 .popup__form_save:hover{
   opacity: 0.8;
   border-radius: 2px;
+  cursor: url('../images/hand_over.png'), auto;
 }
 
 @media screen and (max-width: 880px){
