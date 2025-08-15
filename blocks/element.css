@@ -12,7 +12,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  }
+}
 
 .element__pic{
   height: 282px;
@@ -46,11 +46,11 @@
   font-size: 24px;
   line-height: 100%;
   color: #000000;
-  -o-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
      text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}
+    white-space: nowrap;
+    overflow: hidden;
+  }
 
 .element__title_fav{
   width: 21px;
