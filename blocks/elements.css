@@ -92,8 +92,8 @@
 }
 
 .elements__element_title-fav:hover{
-  width: 21;
-  height: 19;
+  width: 21px;
+  height: 19px;
   opacity: 0.5;
   cursor: url('../images/hand_over.png'), auto;
 }

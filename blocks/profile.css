@@ -37,9 +37,9 @@
   width: 47.1591%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[1];
+  -ms-grid-columns: 1fr;
   grid-template-columns: repeat(1, 1fr);
-  -ms-grid-rows: (1fr)[1];
+  -ms-grid-rows: 1fr;
   grid-template-rows: repeat(1, 1fr);
       grid-template-areas:
   "name edit"
@@ -84,7 +84,7 @@
 }
 
 .profile__add_button{
-  background-image: url(../images/Add\ Button.png);
+  background-image: url(../images/Add_Button.png);
   padding: 0;
 }
 
@@ -130,9 +130,9 @@
     align-self: center;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[1];
-    grid-template-columns: 2;
-    -ms-grid-rows: (1fr)[1];
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr;
     column-gap: 10px;
     grid-template-rows: repeat(1, 1fr);
     grid-template-areas:
@@ -175,7 +175,7 @@
   }
 
   .profile__add_button{
-    background-image: url(../images/Add\ Button.svg);
+    background-image: url(../images/Add_Button.svg);
     padding: 0;
   }
 }
