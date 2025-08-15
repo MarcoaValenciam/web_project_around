@@ -126,7 +126,7 @@
     padding-top: 30px;
     padding-left: 0;
     align-self: center;
-    width: 244px;
+    width: 234px;
     align-items: center;
     display: -ms-grid;
     display: grid;
@@ -134,10 +134,10 @@
     grid-template-columns: 200px 24px;
     -ms-grid-rows: 1fr;
     column-gap: 10px;
-    grid-template-rows: repeat(1, 1fr);
+    grid-template-rows: repeat(2, auto);
     grid-template-areas:
     "name edit"
-    "activity ."
+    "activity activity"
     ;
   }
 
@@ -157,14 +157,13 @@
   }
 
   .profile__info_activity{
-    padding: 14px 0 0 0;
+    padding-top: 14px;
     width: 100%;
     font-weight: 400;
     font-size: 14px;
     line-height: 100%;
     text-align: center;
-
-    column-gap: 0;
+    grid-area: activity;
   }
 
   .profile__add{

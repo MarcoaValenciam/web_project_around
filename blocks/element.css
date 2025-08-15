@@ -21,7 +21,8 @@
   }
 
 .element__title{
-  width: 87.2340%;
+  /* width: 87.2340%; */
+  width: 246px;
   height: 79px;
   align-self: center;
   display: -webkit-box;
@@ -40,6 +41,7 @@
 }
 
 .element__title_name{
+  width: 225px;
   font-weight: 900;
   font-size: 24px;
   line-height: 100%;

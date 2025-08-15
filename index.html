@@ -19,9 +19,9 @@
           <img class="profile__avatar profile__avatar_image" src="./images/avatar_profile.jpg" alt="imagen de perfil">
         </div>
         <div class="profile__info">
-          <h1 class="profile__info profile__info_name">Jacques Cousteau</h1>
-          <img class="profile__info profile__info_edit-button" src="./images/Edit_Button.png" alt="botón de edición" />
-          <h2 class="profile__info profile__info_activity">Explorador</h2>
+          <h1 class="profile__info_name">Jacques Cousteau</h1>
+          <img class="profile__info_edit-button" src="./images/Edit_Button.png" alt="botón de edición" />
+          <p class="profile__info_activity">Explorador</p>
         </div>
         <div class="profile__add">
           <div class="profile__add profile__add_button" id="profile__add_button"></div>
@@ -33,8 +33,8 @@
             <img class="element__pic element__pic_display" src="./images/yosemite.jpg" alt="imagen yosemite"/>
           </div>
           <div class="element__title">
-            <p class="element__title element__title_name">Valle de Yosemite</p>
-            <img id="fav1" class="element__title element__title_fav" src="./images/fav.svg" alt="favorito">
+            <p class="element__title_name">Valle de Yosemite</p>
+            <img id="fav1" class="element__title_fav" src="./images/fav.svg" alt="favorito">
           </div>
         </div>
         <div class="element">
@@ -42,8 +42,8 @@
             <img class="element__pic element__pic_display" src="./images/lago_louise.jpg" alt="imagen lago loise"/>
           </div>
           <div class="element__title">
-            <p class="element__title element__title_name">Lago Louise</p>
-            <img id="fav2" class="element__title element__title_fav" src="./images/fav.svg" alt="favorito">
+            <p class="element__title_name">Lago Louise</p>
+            <img id="fav2" class="element__title_fav" src="./images/fav.svg" alt="favorito">
           </div>
         </div>
         <div class="element">
@@ -51,8 +51,8 @@
             <img class="element__pic element__pic_display" src="./images/montanas_calvas.jpg" alt="imagen montanas calvas"/>
           </div>
           <div class="element__title">
-            <p class="element__title element__title_name">Montañas Calvas</p>
-            <img id="fav3" class="element__title element__title_fav" src="./images/fav.svg" alt="favorito">
+            <p class="element__title_name">Montañas Calvas</p>
+            <img id="fav3" class="element__title_fav" src="./images/fav.svg" alt="favorito">
           </div>
         </div>
         <div class="element">
@@ -60,8 +60,8 @@
             <img class="element__pic element__pic_display" src="./images/latemar.jpg" alt="imagen latemar"/>
           </div>
           <div class="element__title">
-            <p class="element__title element__title_name">Latemar</p>
-            <img id="fav4" class="element__title element__title_fav" src="./images/fav.svg" alt="favorito">
+            <p class="element__title_name">Latemar</p>
+            <img id="fav4" class="element__title_fav" src="./images/fav.svg" alt="favorito">
           </div>
         </div>
         <div class="element">
@@ -69,8 +69,8 @@
             <img class="element__pic element__pic_display" src="./images/vanois_national_park.jpg" alt="imagen vanois national park"/>
           </div>
           <div class="element__title">
-            <p class="element__title element__title_name">Vanois National Park</p>
-            <img id="fav5" class="element__title element__title_fav" src="./images/fav.svg" alt="favorito">
+            <p class="element__title_name">Vanois National Park</p>
+            <img id="fav5" class="element__title_fav" src="./images/fav.svg" alt="favorito">
           </div>
         </div>
         <div class="element">
@@ -78,8 +78,8 @@
             <img class="element__pic element__pic_display" src="./images/lago_di_braies.jpg" alt="imagen lago di braies"/>
           </div>
           <div class="element__title">
-            <p class="element__title element__title_name">Lago di Braies</p>
-            <img id="fav6" class="element__title element__title_fav" src="./images/fav.svg" alt="favorito">
+            <p class="element__title_name">Lago di Braies</p>
+            <img id="fav6" class="element__title_fav" src="./images/fav.svg" alt="favorito">
           </div>
         </div>
       </section>
@@ -87,18 +87,18 @@
     <footer class="footer">&copy; 2025 Around The U.S.</footer>
   </div>
   <div class="popup" >
-    <div class="popup popup__container" id="popup__container">
+    <div class="popup__container" id="popup__container">
       <h2 class="popup__title">Editar perfil</h2>
       <img class="popup__close" src="./images/close_icon.png" alt="imagen cerrar popup"/>
       <form class="popup__form" id="popup__form">
-        <div class="popup__form popup__form_name">
-          <input type="text" id="name" class="popup__form popup__form_name-text" placeholder="Nombre"/>
+        <div class="popup__form_name">
+          <input type="text" id="name" class="popup__form_name-text" placeholder="Nombre"/>
         </div>
-        <div class="popup__form popup__form_activity">
-          <input type="text" id="activity" class="popup__form popup__form_activity-text" placeholder="Acerca de mí"/>
+        <div class="popup__form_activity">
+          <input type="text" id="activity" class="popup__form_activity-text" placeholder="Acerca de mí"/>
         </div>
-        <div class="popup__form popup__form_save">
-          <input type="submit" id="save" class="popup__form popup__form_save-button" value="Guardar" />
+        <div class="popup__form_save">
+          <input type="submit" id="save" class="popup__form_save-button" value="Guardar" />
         </div>
       </form>
     </div>
