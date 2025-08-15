@@ -27,7 +27,7 @@ function closePopup(){
   page.style.opacity = 1;
 }
 
-let edit = document.querySelector(".profile_info_edit-button");
+let edit = document.querySelector(".profile__info_edit-button");
 edit.addEventListener("click", editPopup);
 function editPopup() {
   const name = document.querySelector(".profile__info_name");

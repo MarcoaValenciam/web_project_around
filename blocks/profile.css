@@ -98,8 +98,6 @@
     padding-top: 42px;
     width: 282px;
     margin: auto;
-    align-self:center;
-    -ms-grid-column-align: center;
         justify-self: center;
     font-family: Inter;
     display: -webkit-box;
@@ -109,6 +107,7 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    justify-content: center;
   }
 
   .profile__avatar{
@@ -126,24 +125,26 @@
   .profile__info{
     padding-top: 30px;
     padding-left: 0;
-    width: fit-content;
     align-self: center;
+    width: 244px;
+    align-items: center;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 200px 24px;
     -ms-grid-rows: 1fr;
     column-gap: 10px;
     grid-template-rows: repeat(1, 1fr);
     grid-template-areas:
     "name edit"
-    "activity activity"
+    "activity ."
     ;
   }
 
   .profile__info_name{
     padding: 0;
-    width: 100%;
+    margin: 0;
+    width: 200px;
     font-weight: 500;
     font-size: 22px;
     line-height: 100%;
@@ -152,6 +153,7 @@
 
   .profile__info_edit-button{
     padding: 0;
+    width: 24px;
   }
 
   .profile__info_activity{
@@ -161,7 +163,7 @@
     font-size: 14px;
     line-height: 100%;
     text-align: center;
-    grid-area: activity;
+
     column-gap: 0;
   }
 

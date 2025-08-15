@@ -1,0 +1,63 @@
+.element{
+  height: 361px;
+  background-color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  }
+
+.element__pic{
+  height: 282px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  }
+
+.element__title{
+  width: 87.2340%;
+  height: 79px;
+  align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-items: center;
+}
+
+.element__title_name{
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 100%;
+  color: #000000;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.element__title_fav{
+  width: 21px;
+  height: 19px;
+}
+
+.element__title_fav:hover{
+  width: 21px;
+  height: 19px;
+  opacity: 0.5;
+  cursor: url('../images/hand_over.png'), auto;
+}

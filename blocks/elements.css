@@ -36,7 +36,7 @@
   -ms-grid-column: 5;
 }
 
-.elements__element{
+/* .elements__element{
   height: 361px;
   background-color: white;
   border-top-left-radius: 10px;
@@ -50,7 +50,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
+  }
 
 .elements__element_pic{
   height: 282px;
@@ -59,10 +59,8 @@
   }
 
 .elements__element_title{
-  width: 246px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  width: 87.2340%;
+  align-self: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -73,6 +71,9 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-content: center;
 }
 
 .elements__element_title-name{
@@ -96,7 +97,7 @@
   height: 19px;
   opacity: 0.5;
   cursor: url('../images/hand_over.png'), auto;
-}
+} */
 
 @media screen and (max-width: 880px){
   .elements{
