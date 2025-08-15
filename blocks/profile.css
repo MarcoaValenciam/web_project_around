@@ -55,14 +55,14 @@
   line-height: 48px;
 }
 
-.profile_info_edit-button{
+.profile__info_edit-button{
   align-self: center;
   width: 24px;
   height: 24px;
   border-width: 1px;
 }
 
-.profile_info_edit-button:hover{
+.profile__info_edit-button:hover{
   border: 1px solid #FFFFFF;
   cursor: url('../images/hand_over.png'), auto;
 }
@@ -150,7 +150,7 @@
     text-align: right;
   }
 
-  .profile_info_edit-button{
+  .profile__info_edit-button{
     padding: 0;
   }
 
