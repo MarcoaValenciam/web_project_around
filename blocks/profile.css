@@ -91,7 +91,6 @@
     border: 2px solid #FFFFFF;
 }
 
-/* @media screen and (min-width: 320px) and (max-width: 880px){ */
 @media screen and (max-width: 880px){
   .profile{
     padding-top: 42px;
@@ -178,11 +177,3 @@
     padding: 0;
   }
 }
-
-/* @media screen and (max-width: 320px) {
-  .profile{
-    padding-top: 20px;
-    width: 58.75%;
-    text-align: center;
-  }
-} */

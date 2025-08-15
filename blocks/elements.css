@@ -52,7 +52,6 @@
           flex-direction: column;
 }
 
-
 .elements__element_pic{
   height: 282px;
   border-top-left-radius: 10px;
@@ -98,7 +97,6 @@
   opacity: 0.5;
 }
 
-/* @media screen and (min-width: 320px) and (max-width: 880px){ */
 @media screen and (max-width: 880px){
   .elements{
     padding-top: 36px;

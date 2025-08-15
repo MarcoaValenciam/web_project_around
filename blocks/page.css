@@ -24,17 +24,10 @@ h1, h2, p{
   color: white;
 }
 
-/* @media screen and (min-width: 320px) and (max-width: 880px){ */
 @media screen and (max-width: 880px){
   .page{
     margin: auto;
     align-self: center;
-    width: 320px;
+    width: 100vw;
   }
 }
-/*
-@media screen and (max-width: 320px) {
-  .page{
-    margin: 0;
-  }
-} */
