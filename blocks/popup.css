@@ -117,7 +117,7 @@
   line-height: 100%;
 }
 
-.popup__form_save:hover{
+.popup__form_save-button:hover{
   opacity: 0.8;
   border-radius: 2px;
   cursor: url('../images/hand_over.png'), auto;
