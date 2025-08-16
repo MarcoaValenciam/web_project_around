@@ -64,14 +64,14 @@
   width: 83.2558%;
 }
 
-.popup__form_name{
+.popup__form-name{
   padding-top: 54px;
   width: 100%;
   height: 27.26px;
   border-bottom:1px solid rgb(0, 0, 0, 0.2) ;
 }
 
-.popup__form_name-text{
+.popup__form-name-text{
   width: 100%;
   border: none;
   outline: none;
@@ -81,14 +81,14 @@
   opacity: 0.2;
 }
 
-.popup__form_activity{
+.popup__form-activity{
   width: 100%;
   height: 27.26px;
   padding-top: 29.74px;
   border-bottom:1px solid rgb(0, 0, 0, 0.2) ;
 }
 
-.popup__form_activity-text{
+.popup__form-activity-text{
   width: 100%;
   border: none;
   outline: none;
@@ -98,7 +98,7 @@
   opacity: 0.2;
 }
 
-.popup__form_save{
+.popup__form-save{
   padding-top: 48px;
   width: 100%;
   height: 50.1520px;
@@ -107,7 +107,7 @@
   border-radius: 2px;
 }
 
-.popup__form_save-button{
+.popup__form-save-button{
   width: 100%;
   height: 100%;
   border:1px solid #000000;
@@ -117,7 +117,7 @@
   line-height: 100%;
 }
 
-.popup__form_save-button:hover{
+.popup__form-save-button:hover{
   opacity: 0.8;
   border-radius: 2px;
   cursor: url('../images/hand_over.png'), auto;
@@ -148,33 +148,33 @@
     width: 84.3972%;
   }
 
-  .popup__form_name{
+  .popup__form-name{
     padding-top: 76px;
     width: 100%;
     height: 26px;
   }
 
-.popup__form_name-text{
+.popup__form-name-text{
     width: 100%;
   }
 
-.popup__form_activity{
+.popup__form-activity{
     width: 100%;
     padding-top: 30px;
   }
 
-  .popup__form_activity-text{
+  .popup__form-activity-text{
     width: 100%;
   }
 
-  .popup__form_save{
+  .popup__form-save{
     padding-top: 46px;
     width: 100%;
     height: 46px;
     opacity: 1;
   }
 
-  .popup__form_save-button{
+  .popup__form-save-button{
     width: 100%;
     height: 100%;
     font-size: 14px;

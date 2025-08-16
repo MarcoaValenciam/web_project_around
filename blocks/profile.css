@@ -26,7 +26,7 @@
      object-fit: cover;
 }
 
-.profile__avatar_image{
+.profile__avatar-image{
   width: 100%;
 }
 
@@ -47,7 +47,7 @@
   ;
 }
 
-.profile__info_name{
+.profile__info-name{
   padding: 0;
   width: 100%;
   font-weight: 500;
@@ -55,14 +55,14 @@
   line-height: 48px;
 }
 
-.profile__info_edit-button{
+.profile__info-edit-button{
   align-self: center;
   width: 24px;
   height: 24px;
   border-width: 1px;
 }
 
-.profile__info_edit-button:hover{
+.profile__info-edit-button:hover{
   border: 1px solid #FFFFFF;
   cursor: url('../images/hand_over.png'), auto;
 }
@@ -83,12 +83,12 @@
       justify-self: self-end;
 }
 
-.profile__add_button{
+.profile__add-button{
   background-image: url(../images/Add_Button.png);
   padding: 0;
 }
 
-.profile__add_button:hover{
+.profile__add-button:hover{
     border: 2px solid #FFFFFF;
     cursor: url('../images/hand_over.png'), auto;
 }
@@ -141,7 +141,7 @@
     ;
   }
 
-  .profile__info_name{
+  .profile__info-name{
     padding: 0;
     margin: 0;
     width: 200px;
@@ -151,12 +151,12 @@
     text-align: right;
   }
 
-  .profile__info_edit-button{
+  .profile__info-edit-button{
     padding: 0;
     width: 24px;
   }
 
-  .profile__info_activity{
+  .profile__info-activity{
     padding-top: 14px;
     width: 100%;
     font-weight: 400;
@@ -175,7 +175,7 @@
         justify-self: self-end;
   }
 
-  .profile__add_button{
+  .profile__add-button{
     background-image: url(../images/Add_Button.svg);
     padding: 0;
   }

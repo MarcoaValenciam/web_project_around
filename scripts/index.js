@@ -1,4 +1,4 @@
-let add = document.querySelector(".profile__add_button");
+let add = document.querySelector(".profile__add-button");
 add.addEventListener("click", addPopup);
 function addPopup() {
   const nameProfile = document.getElementById("name");
@@ -27,16 +27,16 @@ function closePopup(){
   page.style.opacity = 1;
 }
 
-let edit = document.querySelector(".profile__info_edit-button");
+let edit = document.querySelector(".profile__info-edit-button");
 edit.addEventListener("click", editPopup);
 function editPopup() {
-  const name = document.querySelector(".profile__info_name");
+  const name = document.querySelector(".profile__info-name");
   const nameProfile = document.getElementById("name");
   nameProfile.value = name.textContent;
   nameProfile.style.color = "#000";
   nameProfile.style.opacity = 1;
 
-  const activity = document.querySelector(".profile__info_activity");
+  const activity = document.querySelector(".profile__info-activity");
   const activityProfile = document.getElementById("activity");
   activityProfile.value = activity.textContent;
   activityProfile.style.color = "#000";
@@ -79,15 +79,15 @@ function favorito(fav){
   }
 }
 
-let save = document.querySelector(".popup__form_save-button");
+let save = document.querySelector(".popup__form-save-button");
 save.addEventListener("click", savePopup);
 function savePopup() {
   const nameProfile = document.getElementById("name");
-  const name = document.querySelector(".profile__info_name");
+  const name = document.querySelector(".profile__info-name");
   name.textContent = nameProfile.value;
 
   const activityProfile = document.getElementById("activity");
-  const activity = document.querySelector(".profile__info_activity");
+  const activity = document.querySelector(".profile__info-activity");
   activity.textContent = activityProfile.value;
 
   const popup = document.getElementById("popup__container");
@@ -95,7 +95,13 @@ function savePopup() {
 
   const page = document.querySelector(".page");
   page.style.opacity = 1;
+
+  update(event);
 }
+
+ function update(event) {
+    event.preventDefault();
+  }
 
 // // Busquemos el formulario en el DOM
 // let formElement = // Utiliza el método querySelector()
