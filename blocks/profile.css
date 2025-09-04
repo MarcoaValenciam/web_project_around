@@ -74,7 +74,7 @@
   line-height: 100%;
 }
 
-.profile__add{
+.profile__place-add{
   padding-top: 3.9773%;
   padding-left: 18.7500%;
   width: 150px;
@@ -83,12 +83,12 @@
       justify-self: self-end;
 }
 
-.profile__add-button{
+.profile__place-add-button{
   background-image: url(../images/Add_Button.png);
   padding: 0;
 }
 
-.profile__add-button:hover{
+.profile__place-add-button:hover{
     border: 2px solid #FFFFFF;
     cursor: url('../images/hand_over.png'), auto;
 }
@@ -166,7 +166,7 @@
     grid-area: activity;
   }
 
-  .profile__add{
+  .profile__place-add{
     padding-top: 36px;
     padding-left: 0;
     width: 100%;
@@ -175,7 +175,7 @@
         justify-self: self-end;
   }
 
-  .profile__add-button{
+  .profile__place-add-button{
     background-image: url(../images/Add_Button.svg);
     padding: 0;
   }

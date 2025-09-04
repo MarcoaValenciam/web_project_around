@@ -23,69 +23,16 @@
           <img class="profile__info-edit-button" src="./images/Edit_Button.png" alt="botón de edición" />
           <p class="profile__info-activity">Explorador</p>
         </div>
-        <div class="profile__add">
-          <div class="profile__add profile__add-button" id="profile__add_button"></div>
+        <div class="profile__place-add">
+          <div class="profile__place-add profile__place-add-button" id="profile__place-add_button"></div>
         </div>
       </section>
       <section class="elements">
-        <div class="element">
-          <div class="element__pic">
-            <img class="element__pic element__pic-display" src="./images/yosemite.jpg" alt="imagen yosemite"/>
-          </div>
-          <div class="element__title">
-            <p class="element__title-name">Valle de Yosemite</p>
-            <img id="fav1" class="element__title-fav" src="./images/fav.svg" alt="favorito">
-          </div>
-        </div>
-        <div class="element">
-          <div class="element__pic">
-            <img class="element__pic-display" src="./images/lago_louise.jpg" alt="imagen lago loise"/>
-          </div>
-          <div class="element__title">
-            <p class="element__title-name">Lago Louise</p>
-            <img id="fav2" class="element__title-fav" src="./images/fav.svg" alt="favorito">
-          </div>
-        </div>
-        <div class="element">
-          <div class="element__pic">
-            <img class="element__pic element__pic-display" src="./images/montanas_calvas.jpg" alt="imagen montanas calvas"/>
-          </div>
-          <div class="element__title">
-            <p class="element__title-name">Montañas Calvas</p>
-            <img id="fav3" class="element__title-fav" src="./images/fav.svg" alt="favorito">
-          </div>
-        </div>
-        <div class="element">
-          <div class="element__pic">
-            <img class="element__pic element__pic-display" src="./images/latemar.jpg" alt="imagen latemar"/>
-          </div>
-          <div class="element__title">
-            <p class="element__title-name">Latemar</p>
-            <img id="fav4" class="element__title-fav" src="./images/fav.svg" alt="favorito">
-          </div>
-        </div>
-        <div class="element">
-          <div class="element__pic">
-            <img class="element__pic element__pic-display" src="./images/vanois_national_park.jpg" alt="imagen vanois national park"/>
-          </div>
-          <div class="element__title">
-            <p class="element__title-name">Vanois National Park</p>
-            <img id="fav5" class="element__title-fav" src="./images/fav.svg" alt="favorito">
-          </div>
-        </div>
-        <div class="element">
-          <div class="element__pic">
-            <img class="element__pic element__pic-display" src="./images/lago_di_braies.jpg" alt="imagen lago di braies"/>
-          </div>
-          <div class="element__title">
-            <p class="element__title-name">Lago di Braies</p>
-            <img id="fav6" class="element__title-fav" src="./images/fav.svg" alt="favorito">
-          </div>
-        </div>
       </section>
     </main>
     <footer class="footer">&copy; 2025 Around The U.S.</footer>
   </div>
+
   <div class="popup" >
     <div class="popup__container" id="popup__container">
       <h2 class="popup__title">Editar perfil</h2>
@@ -103,6 +50,37 @@
       </form>
     </div>
   </div>
+
+  <div class="popup-add-card" >
+    <div class="popup-add-card__container" id="popup-add-card__container">
+      <h2 class="popup-add-card__title">Nuevo lugar</h2>
+      <img class="popup-add-card__close" src="./images/close_icon.png" alt="imagen cerrar popup-add-card"/>
+      <form class="popup-add-card__form" id="popup-add-card__form">
+        <div class="popup-add-card__form-title">
+          <input type="text" id="title" class="popup-add-card__form-title-text" placeholder="Título"/>
+        </div>
+        <div class="popup-add-card__form-place">
+          <input type="text" id="place" class="popup-add-card__form-place-text" placeholder="Enlace a la imagen"/>
+        </div>
+        <div class="popup-add-card__form-add">
+          <input type="submit" id="add-place" class="popup-add-card__form-add-button" value="Crear" />
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <template id="card-template" >
+    <div class="element">
+      <div class="element__pic">
+        <img class="element__pic element__pic-display" src="" alt="imagen lugar"/>
+      </div>
+      <div class="element__title">
+        <p class="element__title-name">Valle de Yosemite</p>
+        <img id="fav1" class="element__title-fav" src="./images/fav.svg" alt="favorito">
+      </div>
+    </div>
+ </template>
+
   <script src="scripts/index.js"></script>
 </body>
 </html>

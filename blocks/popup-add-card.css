@@ -1,0 +1,184 @@
+.popup-add-card{
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+          flex-direction: column;
+  justify-items: center ;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  padding: 0;
+  background-color: transparent;
+  width: 100vw;
+}
+
+.popup-add-card__container{
+  visibility : hidden;
+  position: absolute;
+  width: 430px;
+  height: 330px;
+  top: 195px;
+  justify-self: center;
+  background-color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-family: Inter;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popup-add-card__close{
+  position: absolute;
+  top: -40px;
+  left: 430px;
+  width: 40px;
+  height: 40px;
+}
+
+.popup-add-card__close:hover{
+  opacity: 0.6;
+  cursor: url('../images/hand_over.png'), auto;
+}
+
+.popup-add-card__title{
+  width: 76.7442%;
+  color: #000000;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 100%;
+  padding-top: 34px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.popup-add-card__form{
+  width: 83.2558%;
+}
+
+.popup-add-card__form-title{
+  padding-top: 54px;
+  width: 100%;
+  height: 27.26px;
+  border-bottom:1px solid rgb(0, 0, 0, 0.2) ;
+}
+
+.popup-add-card__form-title-text{
+  width: 100%;
+  border: none;
+  outline: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  opacity: 0.2;
+}
+
+.popup-add-card__form-place{
+  width: 100%;
+  height: 27.26px;
+  padding-top: 29.74px;
+  border-bottom:1px solid rgb(0, 0, 0, 0.2) ;
+}
+
+.popup-add-card__form-place-text{
+  width: 100%;
+  border: none;
+  outline: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  opacity: 0.2;
+}
+
+.popup-add-card__form-add{
+  padding-top: 48px;
+  width: 100%;
+  height: 50.1520px;
+  opacity: 1;
+  border-width: 1px;
+  border-radius: 2px;
+}
+
+.popup-add-card__form-add-button{
+  width: 100%;
+  height: 100%;
+  border:1px solid #000000;
+  background-color: black;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  text-align: center;
+  color: white;
+}
+
+.popup-add-card__form-add-button:hover{
+  opacity: 0.8;
+  border-radius: 2px;
+  cursor: url('../images/hand_over.png'), auto;
+}
+
+@media screen and (max-width: 880px){
+  .popup-add-card__container{
+    width: 282px;
+    height: 322px;
+    top: 123px;
+  }
+
+  .popup-add-card__close{
+    left: 245px;
+    width: 26px;
+    height: 26px;
+  }
+
+  .popup-add-card__title{
+    width: 84.3972%;
+    padding-top: 25px;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 100%;
+  }
+
+  .popup-add-card__form{
+    width: 84.3972%;
+  }
+
+  .popup-add-card__form-title{
+    padding-top: 76px;
+    width: 100%;
+    height: 26px;
+  }
+
+.popup-add-card__form-title-text{
+    width: 100%;
+  }
+
+.popup-add-card__form-place{
+    width: 100%;
+    padding-top: 30px;
+  }
+
+  .popup-add-card__form-activity-text{
+    width: 100%;
+  }
+
+  .popup-add-card__form-add{
+    padding-top: 46px;
+    width: 100%;
+    height: 46px;
+    opacity: 1;
+  }
+
+  .popup-add-card__form-add-button{
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+  }
+}

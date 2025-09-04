@@ -1,31 +1,42 @@
-let add = document.querySelector(".profile__add-button");
-add.addEventListener("click", addPopup);
-function addPopup() {
-  const nameProfile = document.getElementById("name");
-  nameProfile.value = "";
-  nameProfile.style.opacity = 0.2;
+const initialCards = [
+  {
+    name: "Valle de Yosemite",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/yosemite.jpg"
+  },
+  {
+    name: "Lago Louise",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/lake-louise.jpg"
+  },
+  {
+    name: "Montañas Calvas",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/bald-mountains.jpg"
+  },
+  {
+    name: "Latemar",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/latemar.jpg"
+  },
+  {
+    name: "Parque Nacional de la Vanoise",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/vanoise.jpg"
+  },
+  {
+    name: "Lago di Braies",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/lago.jpg"
+  }
+];
 
-  const activityProfile = document.getElementById("activity");
-  activityProfile.value = "";
-  activityProfile.style.opacity = 0.2;
+initialCards.forEach(function(curretValue){
+  // clona el contenido de la etiqueta template
+  const cardElement = document.querySelector("#card-template").content.cloneNode(true);
+  // añade el contenido
+  cardElement.querySelector(".element__pic-display").src = curretValue.link;
+  cardElement.querySelector(".element__pic-display").alt = ("imagen" + curretValue.name);
+  cardElement.querySelector(".element__title-name").textContent = curretValue.name;
 
-  const save = document.getElementById("save");
-  save.style.opacity = 0.2;
-
-  const popup = document.getElementById("popup__container");
-  popup.style.visibility = "visible";
-  const page = document.querySelector(".page");
-  page.style.opacity = 0.7;
-}
-
-let close = document.querySelector(".popup__close");
-close.addEventListener("click", closePopup);
-function closePopup(){
-  const popup = document.getElementById("popup__container");
-  popup.style.visibility = "hidden";
-  const page = document.querySelector(".page");
-  page.style.opacity = 1;
-}
+  // haz que aparezca en la página
+  const elements = document.querySelector('.elements');
+  elements.append(cardElement);
+});
 
 let edit = document.querySelector(".profile__info-edit-button");
 edit.addEventListener("click", editPopup);
@@ -54,29 +65,13 @@ function editPopup() {
   page.style.opacity = 0.7;
 }
 
-let fav1 = document.querySelector("#fav1");
-favorito(fav1);
-let fav2 = document.querySelector("#fav2");
-favorito(fav2);
-let fav3 = document.querySelector("#fav3");
-favorito(fav3);
-let fav4 = document.querySelector("#fav4");
-favorito(fav4);
-let fav5 = document.querySelector("#fav5");
-favorito(fav5);
-let fav6 = document.querySelector("#fav6");
-favorito(fav6);
-//
-function favorito(fav){
-  fav.addEventListener("click", clickFav);
-  function clickFav() {
-    if(fav.getAttribute("src") == "./images/fav.svg"){
-      fav.setAttribute("src", "./images/fav_act.png");
-    }
-    else{
-      fav.setAttribute("src", "./images/fav.svg");
-    }
-  }
+let close = document.querySelector(".popup__close");
+close.addEventListener("click", closePopup);
+function closePopup(){
+  const popup = document.getElementById("popup__container");
+  popup.style.visibility = "hidden";
+  const page = document.querySelector(".page");
+  page.style.opacity = 1;
 }
 
 let save = document.querySelector(".popup__form-save-button");
@@ -99,9 +94,56 @@ function savePopup() {
   update(event);
 }
 
- function update(event) {
-    event.preventDefault();
-  }
+function update(event) {
+  event.preventDefault();
+}
+
+let openAddCardPopup = document.querySelector(".profile__place-add-button");
+openAddCardPopup.addEventListener("click", addPlacePopup);
+function addPlacePopup() {
+  const popupAdd = document.getElementById("popup-add-card__container");
+  popupAdd.style.visibility = "visible";
+  const page = document.querySelector(".page");
+  page.style.opacity = 0.7;
+}
+
+let closeAddCardPopup = document.querySelector(".popup-add-card__close");
+closeAddCardPopup.addEventListener("click", closeAddCard);
+function closeAddCard(){
+  const popupAddCard = document.getElementById("popup-add-card__container");
+  popupAddCard.style.visibility = "hidden";
+  const page = document.querySelector(".page");
+  page.style.opacity = 1;
+}
+
+let addCard = document.querySelector(".popup-add-card__form-add-button");
+addCard.addEventListener("click", addCardPlace);
+function addCardPlace() {
+  const titleCard = document.getElementById("title");
+  const placeCard = document.getElementById("place");
+
+  // clona el contenido de la etiqueta template
+  const cardElement = document.querySelector("#card-template").content.cloneNode(true);
+  // // añade el contenido
+  cardElement.querySelector(".element__pic-display").src = placeCard;
+  cardElement.querySelector(".element__pic-display").alt = ("imagen" + titleCard);
+  cardElement.querySelector(".element__title-name").textContent = titleCard;
+  // haz que aparezca en la página
+  const elements = document.querySelector('.elements');
+  elements.prepend(cardElement);
+
+  const popupAdd = document.getElementById("popup-add-card__container");
+  popupAdd.style.visibility = "hidden";
+  const page = document.querySelector(".page");
+  page.style.opacity = 1;
+
+  return false;
+  // update(event);
+}
+
+function update(event) {
+  event.preventDefault();
+}
 
 // // Busquemos el formulario en el DOM
 // let formElement = // Utiliza el método querySelector()
@@ -133,3 +175,4 @@ function savePopup() {
 // // Conecta el manipulador (handler) al formulario:
 // // se observará el evento de entrega
 // formElement.addEventListener('submit', handleProfileFormSubmit);
+
