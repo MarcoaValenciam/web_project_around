@@ -28,6 +28,9 @@
   top: -33px;
 }
 
+.element__pic-display:hover{
+  cursor: url('../images/hand_over.png'), auto;
+}
 .element__pic-trash{
   position: relative;
   z-index: 2;

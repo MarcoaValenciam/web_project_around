@@ -1,0 +1,117 @@
+.popup-image{
+  margin: auto;
+  padding: 0;
+  position: absolute;
+  top: 41px;
+  justify-self: center;
+  visibility: hidden;
+  background-color: transparent;
+  font-family: Inter;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+          flex-direction: column;
+  justify-items: center ;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.popup-image__close{
+  position: relative;
+  align-self:flex-end;
+  right: -35px;
+}
+
+.popup-image__close:hover{
+  opacity: 0.6;
+  cursor: url('../images/hand_over.png'), auto;
+}
+
+.popup-image__display{
+  max-width: 75vw;
+  max-height: 75vh;
+}
+
+.popup-image__title{
+  padding-top: 10px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  align-self: flex-start;
+  color: #FFFFFF;
+}
+
+.popup__form{
+  width: 83.2558%;
+}
+
+.popup__form-name{
+  padding-top: 54px;
+  width: 100%;
+  height: 27.26px;
+  border-bottom:1px solid rgb(0, 0, 0, 0.2) ;
+}
+
+.popup__form-name-text{
+  width: 100%;
+  border: none;
+  outline: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  opacity: 0.2;
+}
+
+.popup__form-activity{
+  width: 100%;
+  height: 27.26px;
+  padding-top: 29.74px;
+  border-bottom:1px solid rgb(0, 0, 0, 0.2) ;
+}
+
+.popup__form-activity-text{
+  width: 100%;
+  border: none;
+  outline: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  opacity: 0.2;
+}
+
+.popup__form-save{
+  padding-top: 48px;
+  width: 100%;
+  height: 50.1520px;
+  opacity: 1;
+  border-width: 1px;
+  border-radius: 2px;
+}
+
+.popup__form-save-button{
+  width: 100%;
+  height: 100%;
+  border:1px solid #000000;
+  opacity: 0.2;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+}
+
+.popup__form-save-button:hover{
+  opacity: 0.8;
+  border-radius: 2px;
+  cursor: url('../images/hand_over.png'), auto;
+}
+
+@media screen and (max-width: 880px){
+  .popup-image{
+    top: 100px;
+  }
+}

@@ -30,7 +30,7 @@ initialCards.forEach(function(curretValue){
   const cardElement = document.querySelector("#card-template").content.cloneNode(true);
   // añade el contenido
   cardElement.querySelector(".element__pic-display").src = curretValue.link;
-  cardElement.querySelector(".element__pic-display").alt = ("imagen" + curretValue.name);
+  cardElement.querySelector(".element__pic-display").alt = curretValue.name;
   cardElement.querySelector(".element__title-name").textContent = curretValue.name;
 
   // haz que aparezca en la página
@@ -136,7 +136,7 @@ function addCardPlace(event) {
   const cardElement = document.querySelector("#card-template").content.cloneNode(true);
   // // añade el contenido
   cardElement.querySelector(".element__pic-display").src = placeCard.value;
-  cardElement.querySelector(".element__pic-display").alt = ("imagen" + titleCard.value);
+  cardElement.querySelector(".element__pic-display").alt = titleCard.value;
   cardElement.querySelector(".element__title-name").textContent = titleCard.value;
   // haz que aparezca en la página
   const elements = document.querySelector('.elements');
@@ -168,6 +168,34 @@ trashButton.forEach(function(element){
     const cardList = trashTarget.closest(".element");
     cardList.remove();
   });
+});
+
+let openImgPopup = document.querySelectorAll(".element__pic-display");
+openImgPopup.forEach(function(element){
+  element.addEventListener("click", function(event){
+    const imgTarget = event.target;
+
+    const popupImgContainer = document.querySelector(".popup-image");
+    popupImgContainer.style.visibility = "visible";
+
+    const popupImgDisplay = document.querySelector(".popup-image__display");
+    popupImgDisplay.src = imgTarget.src;
+
+    const popupImgTitle = document.querySelector(".popup-image__title");
+    popupImgTitle.textContent = imgTarget.alt;
+
+    const page = document.querySelector(".page");
+    page.style.opacity = 0.7;
+  });
+});
+
+let closePopupImage = document.querySelector(".popup-image__close");
+closePopupImage.addEventListener("click", function() {
+  const popupImgContainer = document.querySelector(".popup-image");
+  popupImgContainer.style.visibility = "hidden";
+
+  const page = document.querySelector(".page");
+  page.style.opacity = 1;
 });
 
 // // Busquemos el formulario en el DOM
