@@ -15,11 +15,33 @@
 }
 
 .element__pic{
+  display:block;
   height: 282px;
   width: 100%;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  }
+}
+
+.element__pic-display{
+  position: relative;
+  z-index: 1;
+  top: -33px;
+}
+
+.element__pic-trash{
+  position: relative;
+  z-index: 2;
+  width: 18px;
+  height: 33px;
+  top: 18px;
+  left: 249px;
+}
+
+.element__pic-trash:hover{
+  height: 19.300195693969727;
+  opacity: 0.6;
+  cursor: url('../images/hand_over.png'), auto;
+}
 
 .element__title{
   /* width: 87.2340%; */
@@ -56,6 +78,12 @@
 .element__title-fav{
   width: 21px;
   height: 19px;
+}
+
+.element__title-fav-active{
+  width: 21px;
+  height: 19px;
+  border-image-source: url(../images/fav_act.png);
 }
 
 .element__title-fav:hover{

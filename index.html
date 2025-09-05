@@ -57,10 +57,10 @@
       <img class="popup-add-card__close" src="./images/close_icon.png" alt="imagen cerrar popup-add-card"/>
       <form class="popup-add-card__form" id="popup-add-card__form">
         <div class="popup-add-card__form-title">
-          <input type="text" id="title" class="popup-add-card__form-title-text" placeholder="Título"/>
+          <input type="text" id="title" class="popup-add-card__form-title-text" placeholder="Título" style="color:black" />
         </div>
         <div class="popup-add-card__form-place">
-          <input type="text" id="place" class="popup-add-card__form-place-text" placeholder="Enlace a la imagen"/>
+          <input type="url" id="place" class="popup-add-card__form-place-text" placeholder="Enlace a la imagen"/>
         </div>
         <div class="popup-add-card__form-add">
           <input type="submit" id="add-place" class="popup-add-card__form-add-button" value="Crear" />
@@ -72,11 +72,12 @@
   <template id="card-template" >
     <div class="element">
       <div class="element__pic">
+        <img class="element__pic element__pic-trash" src="./images/Trash.svg" alt="icono eliminar" />
         <img class="element__pic element__pic-display" src="" alt="imagen lugar"/>
       </div>
       <div class="element__title">
-        <p class="element__title-name">Valle de Yosemite</p>
-        <img id="fav1" class="element__title-fav" src="./images/fav.svg" alt="favorito">
+        <p class="element__title-name"></p>
+        <img id="fav" class="element__title-fav" src="./images/fav.svg" alt="favorito">
       </div>
     </div>
  </template>

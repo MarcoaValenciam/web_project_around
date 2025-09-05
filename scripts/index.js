@@ -101,6 +101,14 @@ function update(event) {
 let openAddCardPopup = document.querySelector(".profile__place-add-button");
 openAddCardPopup.addEventListener("click", addPlacePopup);
 function addPlacePopup() {
+  const titleCard = document.querySelector("#title");
+  // titleCard.value = "";
+  titleCard.value = "Card Nueva";
+
+  const placeCard = document.querySelector("#place");
+  // placeCard.value = "";
+  placeCard.value = "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/lago.jpg";
+
   const popupAdd = document.getElementById("popup-add-card__container");
   popupAdd.style.visibility = "visible";
   const page = document.querySelector(".page");
@@ -118,16 +126,18 @@ function closeAddCard(){
 
 let addCard = document.querySelector(".popup-add-card__form-add-button");
 addCard.addEventListener("click", addCardPlace);
-function addCardPlace() {
-  const titleCard = document.getElementById("title");
-  const placeCard = document.getElementById("place");
+function addCardPlace(event) {
+  event.preventDefault();
+
+  const titleCard = document.querySelector("#title");
+  const placeCard = document.querySelector("#place");
 
   // clona el contenido de la etiqueta template
   const cardElement = document.querySelector("#card-template").content.cloneNode(true);
   // // añade el contenido
-  cardElement.querySelector(".element__pic-display").src = placeCard;
-  cardElement.querySelector(".element__pic-display").alt = ("imagen" + titleCard);
-  cardElement.querySelector(".element__title-name").textContent = titleCard;
+  cardElement.querySelector(".element__pic-display").src = placeCard.value;
+  cardElement.querySelector(".element__pic-display").alt = ("imagen" + titleCard.value);
+  cardElement.querySelector(".element__title-name").textContent = titleCard.value;
   // haz que aparezca en la página
   const elements = document.querySelector('.elements');
   elements.prepend(cardElement);
@@ -136,14 +146,29 @@ function addCardPlace() {
   popupAdd.style.visibility = "hidden";
   const page = document.querySelector(".page");
   page.style.opacity = 1;
-
-  return false;
-  // update(event);
 }
 
-function update(event) {
-  event.preventDefault();
-}
+const buttonFav = document.querySelectorAll(".element__title-fav");
+buttonFav.forEach(function(element){
+  element.addEventListener("click", function(event){
+    const favTarget = event.target;
+    if(favTarget.getAttribute("src") === "./images/fav.svg"){
+      favTarget.setAttribute("src", "./images/fav_act.png");
+    }
+    else{
+      favTarget.setAttribute("src", "./images/fav.svg");
+    }
+  });
+});
+
+const trashButton = document.querySelectorAll(".element__pic-trash");
+trashButton.forEach(function(element){
+  element.addEventListener("click", function(event){
+    const trashTarget = event.target;
+    const cardList = trashTarget.closest(".element");
+    cardList.remove();
+  });
+});
 
 // // Busquemos el formulario en el DOM
 // let formElement = // Utiliza el método querySelector()
