@@ -1,117 +1,82 @@
 .popup-image{
-  margin: auto;
-  padding: 0;
   position: absolute;
-  top: 41px;
-  justify-self: center;
-  visibility: hidden;
-  background-color: transparent;
-  font-family: Inter;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  top: 0;
+  width: 100%;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-          flex-direction: column;
-  justify-items: center ;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-          align-items: center;
-  -ms-grid-column-align: center;
-      justify-self: center;
+  flex-direction: column;
+  align-items: center;
+  font-family: Inter;
 }
 
-.popup-image__close{
+.popup-image__container{
   position: relative;
-  align-self:flex-end;
-  right: -35px;
+  top: 90px;
+  margin: 0;
+  width: 880px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  visibility: hidden;
 }
 
-.popup-image__close:hover{
+.popup-image__container-close{
+  width: 70vh;
+  top: 91px;
+  align-items: flex-end;
+  left: 30px;
+}
+.popup-image__container-x{
+  width: 40px;
+  height: 40px;
+}
+
+.popup-image__container-close-x:hover{
   opacity: 0.6;
   cursor: url('../images/hand_over.png'), auto;
 }
 
-.popup-image__display{
-  max-width: 75vw;
-  max-height: 75vh;
+.popup-image__container-display{
+  position: relative;
+  top: 90px;
+  width: 70vh;
+  align-self: center;
+  z-index: 2;
 }
 
-.popup-image__title{
+.popup-image__container-title{
+  position: relative;
+  width: 70vh;
   padding-top: 10px;
   font-weight: 400;
   font-size: 12px;
   line-height: 100%;
   align-self: flex-start;
   color: #FFFFFF;
-}
-
-.popup__form{
-  width: 83.2558%;
-}
-
-.popup__form-name{
-  padding-top: 54px;
-  width: 100%;
-  height: 27.26px;
-  border-bottom:1px solid rgb(0, 0, 0, 0.2) ;
-}
-
-.popup__form-name-text{
-  width: 100%;
-  border: none;
-  outline: none;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 100%;
-  opacity: 0.2;
-}
-
-.popup__form-activity{
-  width: 100%;
-  height: 27.26px;
-  padding-top: 29.74px;
-  border-bottom:1px solid rgb(0, 0, 0, 0.2) ;
-}
-
-.popup__form-activity-text{
-  width: 100%;
-  border: none;
-  outline: none;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 100%;
-  opacity: 0.2;
-}
-
-.popup__form-save{
-  padding-top: 48px;
-  width: 100%;
-  height: 50.1520px;
-  opacity: 1;
-  border-width: 1px;
-  border-radius: 2px;
-}
-
-.popup__form-save-button{
-  width: 100%;
-  height: 100%;
-  border:1px solid #000000;
-  opacity: 0.2;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 100%;
-}
-
-.popup__form-save-button:hover{
-  opacity: 0.8;
-  border-radius: 2px;
-  cursor: url('../images/hand_over.png'), auto;
+  align-self: center;
+  align-items: flex-start;
 }
 
 @media screen and (max-width: 880px){
-  .popup-image{
+
+  .popup-image__container{
     top: 100px;
+    width: 320px;
+  }
+
+  .popup-image__container-close{
+    top: 0;
+    width: 75%;
+  }
+
+  .popup-image__container-display{
+    top: 0;
+    width: 75%;
+    max-height: 75vh;
+  }
+
+  .popup-image__container-title{
+    top: 0;
+    width: 75%;
   }
 }
