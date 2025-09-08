@@ -111,6 +111,7 @@ function addPlacePopup() {
 
   const popupAdd = document.getElementById("popup-add-card__container");
   popupAdd.style.visibility = "visible";
+
   const page = document.querySelector(".page");
   page.style.opacity = 0.7;
 }
@@ -144,6 +145,7 @@ function addCardPlace(event) {
 
   const popupAdd = document.getElementById("popup-add-card__container");
   popupAdd.style.visibility = "hidden";
+
   const page = document.querySelector(".page");
   page.style.opacity = 1;
 }
@@ -203,44 +205,16 @@ closePopupImage.addEventListener("click", function() {
     popupImgClose.style.visibility = "hidden";
 
     const popupImgDisplay = document.querySelector(".popup-image__container-display");
+    popupImgDisplay.src = "";
     popupImgDisplay.style.visibility = "hidden";
 
     const popupImgTitle = document.querySelector(".popup-image__container-title");
+    popupImgTitle.textContent = "";
     popupImgTitle.style.visibility = "hidden";
 
     const page = document.querySelector(".page");
   page.style.opacity = 1;
 });
-
-
-
-// let openImgPopup = document.querySelectorAll(".element__pic-display");
-// openImgPopup.forEach(function(element){
-//   element.addEventListener("click", function(event){
-//     const imgTarget = event.target;
-
-//     const popupImgContainer = document.querySelector(".popup-image");
-//     popupImgContainer.style.visibility = "visible";
-
-//     const popupImgDisplay = document.querySelector(".popup-image__display");
-//     popupImgDisplay.src = imgTarget.src;
-
-//     const popupImgTitle = document.querySelector(".popup-image__title");
-//     popupImgTitle.textContent = imgTarget.alt;
-
-//     const page = document.querySelector(".page");
-//     page.style.opacity = 0.7;
-//   });
-// });
-
-// let closePopupImage = document.querySelector(".popup-image__close");
-// closePopupImage.addEventListener("click", function() {
-//   const popupImgContainer = document.querySelector(".popup-image");
-//   popupImgContainer.style.visibility = "hidden";
-
-//   const page = document.querySelector(".page");
-//   page.style.opacity = 1;
-// });
 
 // // Busquemos el formulario en el DOM
 // let formElement = // Utiliza el método querySelector()
