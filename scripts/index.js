@@ -38,6 +38,28 @@ initialCards.forEach(function(curretValue){
   elements.append(cardElement);
 });
 
+const buttonFav = document.querySelectorAll(".element__title-fav");
+buttonFav.forEach(function(element){
+  element.addEventListener("click", function(event){
+    const favTarget = event.target;
+    if(favTarget.getAttribute("src") === "./images/fav.svg"){
+      favTarget.setAttribute("src", "./images/fav_act.png");
+    }
+    else{
+      favTarget.setAttribute("src", "./images/fav.svg");
+    }
+  });
+});
+
+const trashButton = document.querySelectorAll(".element__pic-trash");
+trashButton.forEach(function(element){
+  element.addEventListener("click", function(event){
+    const trashTarget = event.target;
+    const cardList = trashTarget.closest(".element");
+    cardList.remove();
+  });
+});
+
 let edit = document.querySelector(".profile__info-edit-button");
 edit.addEventListener("click", editPopup);
 function editPopup() {
@@ -102,12 +124,10 @@ let openAddCardPopup = document.querySelector(".profile__place-add-button");
 openAddCardPopup.addEventListener("click", addPlacePopup);
 function addPlacePopup() {
   const titleCard = document.querySelector("#title");
-  // titleCard.value = "";
-  titleCard.value = "Card Nueva";
+  titleCard.value = "";
 
   const placeCard = document.querySelector("#place");
-  // placeCard.value = "";
-  placeCard.value = "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/lago.jpg";
+  placeCard.value = "";
 
   const popupAdd = document.getElementById("popup-add-card__container");
   popupAdd.style.visibility = "visible";
@@ -139,6 +159,13 @@ function addCardPlace(event) {
   cardElement.querySelector(".element__pic-display").src = placeCard.value;
   cardElement.querySelector(".element__pic-display").alt = titleCard.value;
   cardElement.querySelector(".element__title-name").textContent = titleCard.value;
+
+  const likeElement = cardElement.querySelector(".element__title-fav");
+  addLikeEvent(likeElement);
+
+  const deleteElement = cardElement.querySelector(".element__pic-trash");
+  addDeleteEvent(deleteElement);
+
   // haz que aparezca en la página
   const elements = document.querySelector('.elements');
   elements.prepend(cardElement);
@@ -150,8 +177,7 @@ function addCardPlace(event) {
   page.style.opacity = 1;
 }
 
-const buttonFav = document.querySelectorAll(".element__title-fav");
-buttonFav.forEach(function(element){
+const addLikeEvent = (element) => {
   element.addEventListener("click", function(event){
     const favTarget = event.target;
     if(favTarget.getAttribute("src") === "./images/fav.svg"){
@@ -161,16 +187,15 @@ buttonFav.forEach(function(element){
       favTarget.setAttribute("src", "./images/fav.svg");
     }
   });
-});
+}
 
-const trashButton = document.querySelectorAll(".element__pic-trash");
-trashButton.forEach(function(element){
+const addDeleteEvent = (element) => {
   element.addEventListener("click", function(event){
     const trashTarget = event.target;
-    const cardList = trashTarget.closest(".element");
-    cardList.remove();
+    const cardDelete = trashTarget.closest(".element");
+    cardDelete.remove();
   });
-});
+}
 
 let openImgPopup = document.querySelectorAll(".element__pic-display");
 openImgPopup.forEach(function(element){
