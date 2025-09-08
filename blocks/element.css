@@ -41,7 +41,7 @@
 }
 
 .element__pic-trash:hover{
-  height: 19.300195693969727;
+  height: 19.300195693969727px;
   opacity: 0.6;
   cursor: url('../images/hand_over.png'), auto;
 }
