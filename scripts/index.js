@@ -166,7 +166,9 @@ function addCardPlace(event) {
   const deleteElement = cardElement.querySelector(".element__pic-trash");
   addDeleteEvent(deleteElement);
 
-  // haz que aparezca en la página
+  const displayElement = cardElement.querySelector(".element__pic-display");
+  addImgEvent(displayElement);
+
   const elements = document.querySelector('.elements');
   elements.prepend(cardElement);
 
@@ -194,6 +196,29 @@ const addDeleteEvent = (element) => {
     const trashTarget = event.target;
     const cardDelete = trashTarget.closest(".element");
     cardDelete.remove();
+  });
+}
+
+const addImgEvent = (element) => {
+  element.addEventListener("click", function(event){
+    const imgTarget = event.target;
+
+    const popupImgContainer = document.querySelector(".popup-image__container");
+    popupImgContainer.style.visibility = "visible";
+
+    const popupImgClose = document.querySelector(".popup-image__container-close-x");
+    popupImgClose.style.visibility = "visible";
+
+    const popupImgDisplay = document.querySelector(".popup-image__container-display");
+    popupImgDisplay.src = imgTarget.src;
+    popupImgDisplay.style.visibility = "visible";
+
+    const popupImgTitle = document.querySelector(".popup-image__container-title");
+    popupImgTitle.textContent = imgTarget.alt;
+    popupImgTitle.style.visibility = "visible";
+
+    const page = document.querySelector(".page");
+    page.style.opacity = 0.7;
   });
 }
 

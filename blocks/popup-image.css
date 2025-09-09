@@ -14,7 +14,7 @@
   position: relative;
   top: 90px;
   margin: 0;
-  max-width: 70vw;
+  max-width: 75vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,7 +22,8 @@
 }
 
 .popup-image__container-close{
-  width: 70vh;
+  position: relative;
+  width: 75vh;
   top: 91px;
   align-items: flex-end;
   left: 30px;
@@ -40,20 +41,20 @@
 .popup-image__container-display{
   position: relative;
   top: 90px;
-  width: 70vh;
+  width: 75vh;
   align-self: center;
 }
 
 .popup-image__container-title{
   position: relative;
-  width: 70vh;
+  width: 75vh;
   padding-top: 10px;
   font-weight: 400;
   font-size: 12px;
   line-height: 100%;
-  align-self: flex-start;
+  /* align-self: flex-start; */
   color: #FFFFFF;
-  align-self: center;
+  /* align-self: center; */
   align-items: flex-start;
 }
 
