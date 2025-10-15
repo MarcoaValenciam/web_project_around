@@ -68,7 +68,6 @@
   padding-top: 54px;
   width: 100%;
   height: 27.26px;
-  border-bottom:1px solid rgb(0, 0, 0, 0.2) ;
 }
 
 .popup__form-name-text{
@@ -79,13 +78,13 @@
   font-size: 14px;
   line-height: 100%;
   opacity: 0.2;
+  border-bottom:1px solid rgb(0, 0, 0, 0.2) ;
 }
 
 .popup__form-activity{
   width: 100%;
   height: 27.26px;
   padding-top: 29.74px;
-  border-bottom:1px solid rgb(0, 0, 0, 0.2) ;
 }
 
 .popup__form-activity-text{
@@ -96,9 +95,10 @@
   font-size: 14px;
   line-height: 100%;
   opacity: 0.2;
+  border-bottom:1px solid rgb(0, 0, 0, 0.2) ;
 }
 
-.popup__form-save{
+.popup__form-submit{
   padding-top: 48px;
   width: 100%;
   height: 50.1520px;
@@ -107,20 +107,51 @@
   border-radius: 2px;
 }
 
-.popup__form-save-button{
+.popup__form-submit-active{
   width: 100%;
   height: 100%;
-  border:1px solid #000000;
-  opacity: 0.2;
   font-weight: 400;
   font-size: 18px;
   line-height: 100%;
+  border:1px solid #000000;
+  opacity: 1;
+  color: white;
+  background-color: #000000;
 }
 
-.popup__form-save-button:hover{
+.popup__form-submit-inactive{
+  width: 100%;
+  height: 100%;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  border:1px solid #000000;
+  color: black;
+  opacity: 0.2;
+  background-color: white;
+}
+
+.popup__form-submit:hover{
   opacity: 0.8;
   border-radius: 2px;
   cursor: url('../images/hand_over.png'), auto;
+}
+
+.popup__form-name-text:valid, .popup__form-activity-text:valid{
+ border-bottom: 1px solid green;
+}
+
+.popup__form_type_error {
+  border-bottom: 1px solid rgb(255, 0, 0, 1);
+}
+
+.popup__form-error_active{
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #FF0000;
 }
 
 @media screen and (max-width: 880px){
@@ -167,14 +198,14 @@
     width: 100%;
   }
 
-  .popup__form-save{
+  .popup__form-submit{
     padding-top: 46px;
     width: 100%;
     height: 46px;
     opacity: 1;
   }
 
-  .popup__form-save-button{
+  .popup__form-submit-active{
     width: 100%;
     height: 100%;
     font-size: 14px;

@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="./pages/index.css" />
 </head>
 <body>
-  <div class="page">
+  <div class="page" id="page">
+    <div class="overlay" id="overlay"></div>
     <header class="header">
     </header>
     <main class="content">
@@ -37,15 +38,17 @@
     <div class="popup__container" id="popup__container">
       <h2 class="popup__title">Editar perfil</h2>
       <img class="popup__close" src="./images/close_icon.png" alt="imagen cerrar popup"/>
-      <form class="popup__form" id="popup__form">
+      <form class="popup__form" id="popup__form" novalidate>
         <div class="popup__form-name">
-          <input type="text" id="name" class="popup__form-name-text" placeholder="Nombre"/>
+          <input type="text" id="name" class="popup__form-name-text" placeholder="Nombre" required minlength="2" maxlength="40"/>
+          <span class="popup__form-name-error name-error"></span>
         </div>
         <div class="popup__form-activity">
-          <input type="text" id="activity" class="popup__form-activity-text" placeholder="Acerca de mí"/>
+          <input type="text" id="activity" class="popup__form-activity-text" placeholder="Acerca de mí" required  minlength="2" maxlength="200"/>
+          <span class="popup__form-activity-error activity-error"></span>
         </div>
-        <div class="popup__form-save">
-          <input type="submit" id="save" class="popup__form-save-button" value="Guardar" />
+        <div class="popup__form-submit">
+          <input type="submit" id="save" class="popup__form-submit-active " value="Guardar" />
         </div>
       </form>
     </div>
@@ -55,15 +58,17 @@
     <div class="popup-add-card__container" id="popup-add-card__container">
       <h2 class="popup-add-card__title">Nuevo lugar</h2>
       <img class="popup-add-card__close" src="./images/close_icon.png" alt="imagen cerrar popup-add-card"/>
-      <form class="popup-add-card__form" id="popup-add-card__form">
+      <form class="popup-add-card__form" id="popup-add-card__form" novalidate>
         <div class="popup-add-card__form-title">
-          <input type="text" id="title" class="popup-add-card__form-title-text" placeholder="Título"  />
+          <input type="text" id="title" class="popup-add-card__form-title-text" placeholder="Título" minlength="2" maxlength="30" required/>
+          <span class="popup-add-card__form-title-error title-error"></span>
         </div>
         <div class="popup-add-card__form-place">
-          <input type="url" id="place" class="popup-add-card__form-place-text" placeholder="Enlace a la imagen"/>
+          <input type="url" id="place" class="popup-add-card__form-place-text" placeholder="Enlace a la imagen" required/>
+          <span class="popup-add-card__form-place-error place-error"></span>
         </div>
-        <div class="popup-add-card__form-add">
-          <input type="submit" id="add-place" class="popup-add-card__form-add-button" value="Crear" />
+        <div class="popup-add-card__form-submit">
+          <input type="submit" id="add-place" class="popup-add-card__form-submit-active popup-add-card__form-submit-inactive" value="Guardar" />
         </div>
       </form>
     </div>
@@ -92,6 +97,6 @@
     </div>
  </template>
 
-  <script src="scripts/index.js"></script>
+  <script src="scripts/index.js" type="module"></script>
 </body>
 </html>

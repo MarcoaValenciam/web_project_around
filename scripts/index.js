@@ -1,3 +1,5 @@
+import {enableValidation, resetForms } from '../scripts/validate.js';
+
 const initialCards = [
   {
     name: "Valle de Yosemite",
@@ -75,16 +77,12 @@ function editPopup() {
   activityProfile.style.color = "#000";
   activityProfile.style.opacity = 1;
 
-  const save = document.getElementById("save");
-  save.style.backgroundColor = "#000";
-  save.style.color = "#fff";
-  save.style.opacity = 1;
-
   const popup = document.getElementById("popup__container");
   popup.style.visibility = "visible";
 
   const page = document.querySelector(".page");
   page.style.opacity = 0.7;
+  displayOverlay();
 }
 
 let close = document.querySelector(".popup__close");
@@ -92,11 +90,17 @@ close.addEventListener("click", closePopup);
 function closePopup(){
   const popup = document.getElementById("popup__container");
   popup.style.visibility = "hidden";
+
+  const popupForm = document.getElementById("popup__container");
+  popupForm.rese;
+
   const page = document.querySelector(".page");
   page.style.opacity = 1;
+
+  hideOverlay();
 }
 
-let save = document.querySelector(".popup__form-save-button");
+let save = document.querySelector(".popup__form-submit");
 save.addEventListener("click", savePopup);
 function savePopup() {
   const nameProfile = document.getElementById("name");
@@ -132,8 +136,12 @@ function addPlacePopup() {
   const popupAdd = document.getElementById("popup-add-card__container");
   popupAdd.style.visibility = "visible";
 
+  // Llama a la función
+  enableValidation();
+
   const page = document.querySelector(".page");
   page.style.opacity = 0.7;
+  displayOverlay();
 }
 
 let closeAddCardPopup = document.querySelector(".popup-add-card__close");
@@ -143,9 +151,11 @@ function closeAddCard(){
   popupAddCard.style.visibility = "hidden";
   const page = document.querySelector(".page");
   page.style.opacity = 1;
+
+  hideOverlay();
 }
 
-let addCard = document.querySelector(".popup-add-card__form-add-button");
+let addCard = document.querySelector(".popup-add-card__form-submit");
 addCard.addEventListener("click", addCardPlace);
 function addCardPlace(event) {
   event.preventDefault();
@@ -177,6 +187,8 @@ function addCardPlace(event) {
 
   const page = document.querySelector(".page");
   page.style.opacity = 1;
+
+  hideOverlay();
 }
 
 const addLikeEvent = (element) => {
@@ -219,6 +231,7 @@ const addImgEvent = (element) => {
 
     const page = document.querySelector(".page");
     page.style.opacity = 0.7;
+    displayOverlay();
   });
 }
 
@@ -236,6 +249,7 @@ openImgPopup.forEach(function(element){
     const popupImgDisplay = document.querySelector(".popup-image__container-display");
     popupImgDisplay.src = imgTarget.src;
     popupImgDisplay.style.visibility = "visible";
+    popupImgDisplay.style.zIndex = 0;
 
     const popupImgTitle = document.querySelector(".popup-image__container-title");
     popupImgTitle.textContent = imgTarget.alt;
@@ -243,29 +257,76 @@ openImgPopup.forEach(function(element){
 
     const page = document.querySelector(".page");
     page.style.opacity = 0.7;
+    displayOverlay();
   });
 });
 
 let closePopupImage = document.querySelector(".popup-image__container-close-x");
-closePopupImage.addEventListener("click", function() {
+closePopupImage.addEventListener("click", closeImage);
+function closeImage() {
   const popupImgContainer = document.querySelector(".popup-image__container");
   popupImgContainer.style.visibility = "hidden";
 
-    const popupImgClose = document.querySelector(".popup-image__container-close-x");
-    popupImgClose.style.visibility = "hidden";
+  const popupImgClose = document.querySelector(".popup-image__container-close-x");
+  popupImgClose.style.visibility = "hidden";
 
-    const popupImgDisplay = document.querySelector(".popup-image__container-display");
-    popupImgDisplay.src = "";
-    popupImgDisplay.style.visibility = "hidden";
+  const popupImgDisplay = document.querySelector(".popup-image__container-display");
+  popupImgDisplay.src = "";
+  popupImgDisplay.style.visibility = "hidden";
 
-    const popupImgTitle = document.querySelector(".popup-image__container-title");
-    popupImgTitle.textContent = "";
-    popupImgTitle.style.visibility = "hidden";
+  const popupImgTitle = document.querySelector(".popup-image__container-title");
+  popupImgTitle.textContent = "";
+  popupImgTitle.style.visibility = "hidden";
 
-    const page = document.querySelector(".page");
+  const page = document.querySelector(".page");
   page.style.opacity = 1;
+
+  hideOverlay();
+};
+
+function displayOverlay(){
+  const page = document.getElementById("page");
+  const overlay = document.getElementById("overlay");
+  overlay.style.width = page.style.width;
+  overlay.style.height = window.height;
+  overlay.style.display = "block";
+  overlay.style.zIndex = 1;
+}
+
+function hideOverlay(){
+  let overlay = document.getElementById("overlay");
+  overlay.style.zIndex = "-1";
+  overlay.style.display = "none";
+  resetForms();
+}
+
+function closeOverlay(){
+  closePopup();
+  closeAddCard();
+  closeImage();
+}
+
+let overlay = document.querySelector(".overlay");
+overlay.addEventListener('click', closeOverlay);
+
+let popupImage = document.querySelector(".popup-image__container");
+popupImage.addEventListener('click', closeOverlay);
+
+document.addEventListener('keydown', function(event) {
+  // Comprobar si la tecla presionada es 'Escape'
+  if (event.key === 'Escape') {
+    closePopup();
+    closeAddCard();
+    closeImage();
+  }
 });
 
+// ===================================================================================================
+// VALIDACIÓN PARA MÁS DE UN CAMPO
+// ===================================================================================================
+// ===================================================================================================
+// CÓDIGO PRECARGADO
+// ===================================================================================================
 // // Busquemos el formulario en el DOM
 // let formElement = // Utiliza el método querySelector()
 
@@ -296,4 +357,86 @@ closePopupImage.addEventListener("click", function() {
 // // Conecta el manipulador (handler) al formulario:
 // // se observará el evento de entrega
 // formElement.addEventListener('submit', handleProfileFormSubmit);
+
+// ===================================================================================================
+// VALIDACIÓN CON UN CAMPO
+// ===================================================================================================
+// // Selecciona todos los elementos del formulario necesarios y los asigna a las constantes
+// const formElement = document.querySelector(".popup");
+// const formInput = formElement.querySelector(".popup__form");
+// formElement.addEventListener("submit", function (evt) {
+//   alert(evt);
+//   // Cancela el comportamiento del navegador por defecto
+//   evt.preventDefault();
+// });
+
+// // Agrega el controlador de eventos input
+// formInput.addEventListener("input", function (evt) {
+//   // Muestra en la consola los valores de la propiedad validity.valid que pertenece al campo de entrada
+//   // en el que estamos detectando el evento input
+//   alert(evt.target.validity.valid);
+//   console.log(evt.target.validity.valid);
+// });
+
+// ===================================================================================================
+// VALIDACIÓN CON DOS CAMPOS
+// ===================================================================================================
+// // Primero, selecciona todos los elementos necesarios del formulario, y asígnalos a variables
+// const formElement = document.querySelector(".popup");
+// const nameTextInput = formElement.querySelector(".popup__form-name-text");
+// // Selecciona cada elemento del mensaje de error utilizando su nombre de clase único
+// const nameError = formElement.querySelector(`.${nameTextInput.id}-error`);
+// //
+// const activityTextInput = formElement.querySelector(".popup__form-activity-text");
+// // Selecciona cada elemento del mensaje de error utilizando su nombre de clase único
+// const activityError = formElement.querySelector(`.${activityTextInput.id}-error`);
+// // Escribe el código de la primera función, que muestra el elemento erróneo
+// const showInputError = (element, elementError, errorMessage) => {
+//   element.classList.add("popup__form_type_error");
+//   // Sustituye el contenido del mensaje de error por el argumento errorMessage que ha sido pasado
+//   elementError.textContent = errorMessage;
+//   // Muestra el mensaje de error
+//   elementError.classList.add("popup__form-error_active");
+// };
+
+// // Escribe el código de la segunda función, que oculta el elemento erróneo
+// const hideInputError = (element, elementError) => {
+//   element.classList.remove("popup__form_type_error");
+//   // Oculta el mensaje de error
+//   elementError.classList.remove("popup__form-error_active");
+//   // Restablece el error
+//   elementError.textContent = "";
+// };
+
+// // Escribe el código de la tercera función, que comprueba si el campo es válido
+// const nameIsValid = () => {
+//   if (!nameTextInput.validity.valid) {
+//     // Si NO lo es (!), muestra el elemento erróneo
+//     showInputError(nameTextInput, nameError, nameTextInput.validationMessage);
+//   } else {
+//     // Si es válido, oculta el elemento erróneo
+//     hideInputError(nameTextInput, nameError);
+//   }
+// };
+
+// // Escribe el código de la tercera función, que comprueba si el campo es válido
+// const activityIsValid = () => {
+//   if (!activityTextInput.validity.valid) {
+//     // Si NO lo es (!), muestra el elemento erróneo
+//     showInputError(activityTextInput, activityError, activityTextInput.validationMessage);
+//   } else {
+//     // Si es válido, oculta el elemento erróneo
+//     hideInputError(activityTextInput, activityError);
+//   }
+// };
+
+// formElement.addEventListener("submit", function (evt) {
+//   // Cancela la acción del navegador por defecto, de modo que al hacer clic en el botón "Enviar" no se actualice la página
+//   evt.preventDefault();
+// });
+
+// // Llama a la función isValid() para cada entrada de caracteres
+// nameTextInput.addEventListener("input", nameIsValid);
+// // Llama a la función isValid() para cada entrada de caracteres
+// activityTextInput.addEventListener("input", activityIsValid);
 

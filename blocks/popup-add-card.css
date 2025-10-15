@@ -68,7 +68,6 @@
   padding-top: 54px;
   width: 100%;
   height: 27.26px;
-  border-bottom:1px solid rgb(0, 0, 0, 0.2) ;
 }
 
 .popup-add-card__form-title-text{
@@ -79,13 +78,13 @@
   font-size: 14px;
   line-height: 100%;
   color: black;
+  border-bottom:1px solid rgb(0, 0, 0, 0.2) ;
 }
 
 .popup-add-card__form-place{
   width: 100%;
   height: 27.26px;
   padding-top: 29.74px;
-  border-bottom:1px solid rgb(0, 0, 0, 0.2) ;
 }
 
 .popup-add-card__form-place-text{
@@ -95,9 +94,10 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 100%;
+  border-bottom:1px solid rgb(0, 0, 0, 0.2) ;
 }
 
-.popup-add-card__form-add{
+.popup-add-card__form-submit{
   padding-top: 48px;
   width: 100%;
   height: 50.1520px;
@@ -106,22 +106,46 @@
   border-radius: 2px;
 }
 
-.popup-add-card__form-add-button{
+.popup-add-card__form-submit-active{
   width: 100%;
   height: 100%;
   border:1px solid #000000;
-  background-color: black;
-  font-weight: 400;
   font-size: 18px;
   line-height: 100%;
   text-align: center;
   color: white;
+  background-color: #000000;
+  opacity: 1;
 }
 
-.popup-add-card__form-add-button:hover{
+.popup-add-card__form-submit-inactive{
+  background-color: white;
+  color: black;
+  opacity: 0.2;
+}
+
+.popup-add-card__form-submit:hover{
+  color: white;
   opacity: 0.8;
   border-radius: 2px;
   cursor: url('../images/hand_over.png'), auto;
+}
+
+.popup-add-card__form-title-text:valid, .popup-add-card__form-place-text:valid{
+ border-bottom: 1px solid green;
+}
+
+.popup-add-card__form_type_error {
+  border-bottom: 1px solid rgb(255, 0, 0, 1);
+}
+
+.popup-add-card__form-error_active{
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #FF0000;
 }
 
 @media screen and (max-width: 880px){
