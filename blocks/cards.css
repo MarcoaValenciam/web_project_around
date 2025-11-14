@@ -1,0 +1,57 @@
+.cards{
+  padding-top: 50px;
+  width: 880px;
+  margin: auto;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  font-family: Inter;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1.9318% 1fr 1.9318% 1fr;
+  grid-template-columns: 282px 282px 282px;
+  -ms-grid-rows: 1fr 20px 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  -webkit-column-gap: 1.9318%;
+          column-gap: 1.9318%;
+  column-gap: 17px;
+  row-gap: 20px;
+}.cards > *:nth-child(1){
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}.cards > *:nth-child(2){
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}.cards > *:nth-child(3){
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+}.cards > *:nth-child(4){
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+}.cards > *:nth-child(5){
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+}.cards > *:nth-child(6){
+  -ms-grid-row: 3;
+  -ms-grid-column: 5;
+}
+
+@media screen and (max-width: 880px){
+  .cards{
+    padding-top: 36px;
+    width: 320px;
+    margin: auto;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    font-family: Inter;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 100%;
+    grid-template-columns: 282px;
+    -ms-grid-rows: 1fr 20px 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    -webkit-column-gap: 1.9318%;
+            column-gap: 1.9318%;
+    row-gap: 20px;
+    justify-content: center;
+  }
+}

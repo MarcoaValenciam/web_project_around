@@ -1,9 +1,20 @@
-export class Card{
+export default class Card{
   // Contructor con parametros: datos de la tarjeta (tanto el texto como un enlace a la imagen) y un selector de elemento
-  constructor(name, link, cardSelector){
+  constructor({name, link}, cardSelector){
     this._name = name;
     this._link = link;
     this._cardSelector = cardSelector;
+  }
+
+  generateCard(){
+    // Llamado a método para trabajar con el marcado/template
+    this._cardElement = this._getTemplate();
+    // Llamado a metodo para añadir el contenido de la card
+    this._addContentCard();
+    // Métodos para el manejo de eventos
+    this._setEventListeners();
+
+    return this._cardElement;
   }
 
   // Métodos privados para trabajar con el marcado
